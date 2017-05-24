@@ -3,14 +3,19 @@ const printAST = require('ast-pretty-print');
 const ansiStyles = require('ansi-styles');
 const util = require('util');
 
-const Node = ansiStyles.dim.open + 'Node: ' + ansiStyles.dim.close;
-const NodePath = ansiStyles.dim.open + 'NodePath: ' + ansiStyles.dim.close;
+function prefix(str, colors) {
+  let res = '';
+  if (colors) res += ansiStyles.dim.open;
+  res += str + ': ';
+  if (colors) res += ansiStyles.dim.close;
+  return res;
+}
 
 function format(value /*: Object */, colors /*: boolean */ = false) {
   if (value.type) {
-    return Node + printAST(value, colors);
+    return prefix('Node', colors) + printAST(value, colors);
   } else if (value.node) {
-    return NodePath + printAST(value.node, colors);
+    return prefix('NodePath', colors) + printAST(value.node, colors);
   } else {
     return util.inspect(value, {colors});
   }

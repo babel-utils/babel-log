@@ -12,10 +12,10 @@ function prefix(str, colors) {
 }
 
 function format(value /*: Object */, colors /*: boolean */ = false) {
-  if (value.type) {
-    return prefix('Node', colors) + printAST(value, colors);
-  } else if (value.node) {
+  if (value.node) {
     return prefix('NodePath', colors) + printAST(value.node, colors);
+  } else if (value.type) {
+    return prefix('Node', colors) + printAST(value, colors);
   } else {
     return util.inspect(value, {colors});
   }

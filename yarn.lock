@@ -8,9 +8,9 @@ ansi-styles@^3.0.0:
   dependencies:
     color-convert "^1.0.0"
 
-ast-pretty-print@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/ast-pretty-print/-/ast-pretty-print-1.1.5.tgz#23a1c8ff96fad9f597a9b3e59acbf42eb2ff0a19"
+ast-pretty-print@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ast-pretty-print/-/ast-pretty-print-1.2.0.tgz#e52915ff33091db2e254a23058e503c79791aadd"
   dependencies:
     ansi-styles "^3.0.0"
 

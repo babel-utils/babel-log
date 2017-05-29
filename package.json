@@ -6,6 +6,7 @@
   "repository": "git@github.com:thejameskyle/babel-log.git",
   "author": "James Kyle <me@thejameskyle.com>",
   "license": "MIT",
+  "files": [],
   "devDependencies": {
     "flow-bin": "^0.46.0"
   },
